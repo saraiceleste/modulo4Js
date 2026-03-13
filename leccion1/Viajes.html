@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🗺️ App de Viajes </title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link href="planificador.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✈️ Mi App de Viajes</h1>
+            <p>Planifica tu próxima aventura con ES6+</p>
+        </div>
+
+        <!-- FORMULARIO PARA AGREGAR VIAJES -->
+        <div class="form-section">
+            <h2>➕ Nuevo Viaje</h2>
+            <div class="form-grid">
+                <input type="text" id="destino" placeholder="Destino (Paris, Tokyo...)" />
+                <input type="date" id="fecha" />
+                <select id="transporte">
+                    <option value="">Elige transporte</option>
+                    <option value="AVION">✈️ Avión (+$1200)</option>
+                    <option value="TREN">🚂 Tren (+$600)</option>
+                    <option value="BUS">🚌 Bus (+$450)</option>
+                </select>
+                <select id="alojamiento">
+                    <option value="">Elige alojamiento</option>
+                    <option value="HOTEL">🏨 Hotel (+$2150)</option>
+                    <option value="HOSTAL">🏠 Hostal (+$300)</option>
+                    <option value="AIRBNB">🏘️ Airbnb (+$700)</option>
+                </select>
+            </div>
+            <div class="btn-group">
+                <button onclick="agregarViaje()">🆕 Agregar Viaje</button>
+                <button onclick="mostrarItinerario()">📋 Ver Itinerario</button>
+                <button onclick="limpiarTodo()">🗑️ Limpiar Todo</button>
+            </div>
+        </div>
+
+        <!-- ITINERARIO DINÁMICO -->
+        <div class="itinerario" id="itinerario">
+            <p>📭 Agrega tu primer viaje para empezar</p>
+        </div>
+
+        <!-- ESTADÍSTICAS -->
+        <div class="stats" id="stats" style="display: none;">
+            <div>📊 <span id="totalViajes">0</span> viajes</div>
+            <div>💰 $<span id="totalGasto">0</span></div>
+            <div>📈 $<span id="promedio">0</span> promedio</div>
+        </div>
+    </div>
+
+    <script src="planificador.js"></script>
+</body>
+</html>
