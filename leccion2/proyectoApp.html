@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de compras</title>
+     <link href="proyectoApp.css" rel="stylesheet">
+</head>
+<body>
+     <div class="pagina-compras">
+        <!-- IZQUIERDA: CATÁLOGO DE PRODUCTOS -->
+        <div class="productos">
+            <h1>Tienda electrónica  🛍️ </h1>
+            <br>
+            <div class="producto">
+                <img src="https://via.placeholder.com/100x100/ff6b6b/ffffff?text=Laptop" alt="Laptop">
+                <div class="producto-info">
+                    <h3>MacBook Pro M3</h3>
+                    <p class="precio">$21,299</p>
+                    <button class="btn-comprar" onclick="agregarCarrito('MacBook Pro M3', 21299, 'https://via.placeholder.com/100x100/ff6b6b/ffffff?text=Laptop')">
+                        🛒 Agregar al carrito
+                    </button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img src="https://via.placeholder.com/100x100/4ecdc4/ffffff?text=Phone" alt="iPhone">
+                <div class="producto-info">
+                    <h3>iPhone 16 Pro</h3>
+                    <p class="precio">$15999</p>
+                    <button class="btn-comprar" onclick="agregarCarrito('iPhone 16 Pro', 15999, 'https://via.placeholder.com/100x100/4ecdc4/ffffff?text=Phone')">
+                        🛒 Agregar al carrito
+                    </button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img src="https://via.placeholder.com/100x100/45b7d1/ffffff?text=Auriculares" alt="Auriculares">
+                <div class="producto-info">
+                    <h3>AirPods Pro 2</h3>
+                    <p class="precio">$4,249</p>
+                    <button class="btn-comprar" onclick="agregarCarrito('AirPods Pro 2', 4249, 'https://via.placeholder.com/100x100/45b7d1/ffffff?text=Auriculares')">
+                        🛒 Agregar al carrito
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- DERECHA: CARRITO DE COMPRAS FIJO -->
+        <div class="carrito" id="carrito">
+            <h2>🛒 Carrito de Compras</h2>
+            <div id="items-carrito" class="vacio">
+                Tu carrito está vacío 😔
+            </div>
+            <div class="total" id="total" style="display: none;">
+                Total: $<span id="total-valor">0</span>
+            </div>
+            <button class="btn-checkout" onclick="checkout()" style="display: none;" id="btn-checkout">
+                ✅ Finalizar Compra
+            </button>
+        </div>
+    </div>
+
+ <script src="proyectoApp.js"></script>   
+</body>
+</html>
