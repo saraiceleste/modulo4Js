@@ -1,41 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>App de compras mejorada</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
     <div class="container-principal">
-        <div class="container-productos" id="paquetes-container">
-             <h1>Aura Media</h1>
-            <div class="producto">
-                <h2>Paquete Basico</h2>
-                <p> 100 fotos</p>
-                <button class="btn-agregar" data-producto-id="1">Agregar al carrito</button>
-            </div>
-            <div class="producto">
-                <h2>Paquete Avanzado</h2>
-                <p> 200 fotos</p>
-                <button class="btn-agregar" data-producto-id="2">Agregar al carrito</button>
-            </div>
-                <div class="producto">
-                    <h2>Paquete Premium</h2>
-                    <p> 300 fotos</p>
-                    <button class="btn-agregar" data-producto-id="3">Agregar al carrito</button>
-                </div>
-
+      <!-- Contenedor de productos y filtros -->
+      <div class="container-productos" id="paquetes-container">
+        <h1>Aura Media</h1>
+        <div class="filtros">
+          <button onclick="filtrarEconomicos()">
+             Filtrar 
+          </button>
+          <button onclick="ordenarAlfabeticamente()">
+             Ordenar A-Z 
+          </button>
+          <button onclick="generarListaNombres()">
+             Solo nombres 
+          </button>
+          <button onclick="mostrarPaquetes(paquetes)">Restablecer</button>
+          <div id="lista-nombres-map"></div>
         </div>
+        <div id="lista-productos"></div>
+      </div>
 
-        <div class="container-carrito">
-            <h2>Carrito de compras</h2>
-            <ul id="carrito-lista"></ul>
-            <p>Total: $<span id="total">0.00</span></p>
-            <button id="btn-comprar">Comprar</button>
-        </div>
+      <!-- Contenedor del carrito -->
+      <div class="container-carrito">
+        <h2>Carrito de compras</h2>
+        <ul id="carrito-lista"></ul>
+        <p>Total: $<span id="total">0.00</span></p>
+        <button id="btn-comprar">Comprar</button>
+      </div>
     </div>
-    
+
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
