@@ -1,6 +1,6 @@
 
 function buscadorMaximoVisual(arr) {
-    console.log(`🎬 Procesando: [${arr.join(', ')}]`); // ← MUESTRA el arreglo actual
+    console.log(`🎬 Procesando: [${arr.join(', ')}]`); //  MUESTRA el arreglo actual
     
   
     if (arr.length === 1) {
